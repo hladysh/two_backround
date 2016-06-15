@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <style>
+        
+        body {
+            background: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+        }
+           
+        .box ,
+        .box1{
+            width: 100px;
+            height: 100px;
+            border: 2px solid #777;
+            display: inline-block;
+        } 
+        .box1 {
+            
+        }
+        .color {
+            clear: both;
+        }   
+        .imeges, 
+        .color {
+            display: none;
+            border: 2px solid #333;
+            background-color: green;
+            width: 320px;
+            height: 320px;
+            right: 5%;
+            top: 16%;
+            position: absolute;
+        }
+        .color_btn,
+        .imeges_btn {
+            padding : 10px;
+            background-color: #858;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 30px 0;
+        }
+       .imeges .box1 {
+           -webkit-background-size: cover;
+           background-size: cover;
+       }
+        </style>
+    </head>
+    <body>
+        
+        
+        <!--<div class="color">-->
+        <!--    <p>Kolor</p>-->
+        <!--    <div class="wrap_color1 ">-->
+        <!--        <div id="box " style=bacround-color:red>1</div>-->
+        <!--        <div id="box">2</div>-->
+        <!--        <div id="box">3</div>-->
+        <!--    </div>-->
+        <!--    <div class="wrap_color3 ">-->
+        <!--        <div id="box">1</div>-->
+        <!--        <div id="box">2</div>-->
+        <!--        <div id="box">3</div>-->
+        <!--    </div>-->
+        <!--    <div class="wrap_color2 ">-->
+        <!--        <div id="box">1</div>-->
+        <!--        <div id="box">2</div>-->
+        <!--        <div id="box">3</div>-->
+        <!--    </div>-->
+        <!--</div>-->
+        
+        
+        <!--<div class="img">-->
+        <!--    <p>Img</p>-->
+            
+        <!--</div>-->
+         <!--<h1>red</h1>-->
+         <!--<h1>white</h1>-->
+         <!--<h1>#999</h1>-->
+         <!--<h1>#555</h1>-->
+         <!--<h1>Push</h1>-->
+         <!--<h1>Push</h1>-->
+         <!--<h1>Push</h1>-->
+        <button class="color_btn">color</button>
+        <button class="imeges_btn">imeges</button>
+        
+        <div class="color">
+            <div class="box" style="background:red", >1</div>
+            <div class="box" style="background:#111">2</div>
+            <div class="box" style="background:#333">3</div><br>
+            <div class="box" style="background:#999">4</div>
+            <div class="box" style="background:#533752">5</div>
+            <div class="box" style="background:#838382">6</div><br>
+            <div class="box" style="background:#555">7</div>
+            <div class="box" style="background:#111888">8</div>
+            <div class="box" style="background:#899775">9</div>
+        </div>
+        
+        <div class="imeges">
+            
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/food); background-size:cover"></div>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/city) ; background-size:cover"></div>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/business) ; background-size:cover" ></div><br>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/fashion) ; background-size:cover"></div>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/nightlife) ; background-size:cover"></div>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/animals); background-size:cover"></div><br>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/abstract); background-size:cover"></div>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/transport); background-size:cover"></div>
+            <div class="box1" style="background: url(http://lorempixel.com/1368/768/cats); background-size:cover"></div>
+        </div>
+        <script>
+            var boxCol = document.querySelectorAll('.box');
+                for (var i = 0; i< boxCol.length; i++) {
+                    boxCol[i].onclick=function( ) {
+                        document.body.style.background=this.style.background;
+                    }
+            } 
+            
+          document.getElementsByTagName('button')[0].addEventListener('click', function(){
+                document.querySelector('.color').style.display='block';
+                document.querySelector('.imeges').style.display='none';
+           });
+        
+         document.getElementsByTagName('button')[1].addEventListener('click', function(){
+                document.querySelector('.color').style.display='none';
+                document.querySelector('.imeges').style.display='block';
+           });
+            
+        
+            
+            var boxColl = document.querySelectorAll('.box1');
+                for (var i = 0; i< boxColl.length; i++) {
+                    boxColl[i].onclick=function( ) {
+                        document.body.style.backgroundImage=this.style.backgroundImage;
+                    }
+            } 
+        
+        </script>
+    </body>
+</html>
